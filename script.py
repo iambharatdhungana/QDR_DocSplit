@@ -28,7 +28,7 @@ except ImportError:
 def add_page_number(section):
     footer = section.footer
     paragraph = footer.paragraphs[0]
-    paragraph.alignment = 2  # 0=Left, 1=Center, 2=Right (Right-aligned)
+    paragraph.alignment = 2  # 0=Left, 1=Center, 2=Right (Right-aligned), depends on how you want to insert page number
     run = paragraph.add_run()
 
     fldChar1 = OxmlElement('w:fldChar')
