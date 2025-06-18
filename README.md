@@ -13,7 +13,7 @@ Manual splitting requires:
 This code automates all of that by:
 - Identifying specific heading patterns
 - Automatically splitting the transcript into multiple documents
-- Saving each section as a new document
+- Saving each section as a new document. This code uses "transcripts.docx" as input file and stores the splited files into folder called "split_transcripts". Make sure you create a folder or rename this according to the name you want to use.
 
 ## Requirements Before Running the Code
 

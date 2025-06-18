@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jun 18 14:06:13 2025
-Updated to support both DOCX and PDF inputs with right-aligned page numbers.
-"""
 
 import os
 import sys
@@ -81,7 +76,7 @@ def split_transcripts(input_path, output_dir):
     current_name = None
 
     for text in paragraphs:
-        if text.strip().startswith("## Respondent"):
+        if text.strip().startswith("## Respondent"):  ## ("## Respondent")This is the indicator of what's the heading should be. Feel free to change accordingly.
             if current_doc and current_name:
                 filename = os.path.join(output_dir, f"{current_name}.docx")
                 current_doc.save(filename)
@@ -101,7 +96,9 @@ def split_transcripts(input_path, output_dir):
         current_doc.save(filename)
 
 # Example usage
+# Input_file is the name of the docuemnt that you want to split
+# Output folder is the name of folder where you wnat to store splited document. Please change it accordingly.
 if __name__ == "__main__":
-    input_file = "transcripts.pdf"  # Change to "transcripts.docx" if needed
+    input_file = "transcripts.docx" 
     output_folder = "split_transcripts"
     split_transcripts(input_file, output_folder)
